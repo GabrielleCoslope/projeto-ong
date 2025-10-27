@@ -1,4 +1,4 @@
-/* --- 1. IMPORTAÇÕES OBRIGATÓRIAS (NO TOPO) --- */
+/* --- 1. IMPORTAÇÕES OBRIGATÓRIAS (PRIMEIRA COISA NO ARQUIVO) --- */
 @import url('variables.css');
 @import url('layout.css');
 @import url('components.css');
@@ -18,7 +18,7 @@ body {
     color: var(--color-body-text);
     background-color: var(--color-white);
     padding-top: var(--header-height);
-    
+
     /* Sticky Footer */
     display: flex;
     flex-direction: column;

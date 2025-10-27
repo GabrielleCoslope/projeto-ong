@@ -71,7 +71,6 @@
 
 /* Hero Section (index.html) */
 .hero-section {
-    /* --- CAMINHO CORRIGIDO AQUI --- */
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/hero-image.jpg');
     background-size: cover;
     background-position: center;
@@ -235,12 +234,146 @@ legend {
     color: var(--color-danger);
     font-size: 0.85rem;
     font-weight: 500;
-    display: block; 
-    height: 1rem; 
+    display: block;
+    height: 1rem;
     margin-top: 0.25rem;
     margin-bottom: 0.5rem;
 }
 .form-control.is-invalid {
     border-color: var(--color-danger);
     box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.25);
+}
+
+
+/* --- COMPONENTES DE ACESSIBILIDADE (ENTREGA IV) --- */
+
+.header-toggles {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Espaço entre os botões */
+}
+
+.toggle-btn {
+    background: var(--color-light-bg);
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1;
+    padding: 0;
+    transition: background 0.3s;
+}
+.toggle-btn:hover {
+    background: #eee;
+}
+
+/* --- Menu Hamburger (Acessibilidade Mobile) --- */
+.nav-toggle {
+    display: none; /* Escondido no desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+}
+.nav-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--color-dark);
+    border-radius: 3px;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Media Query para mostrar o Menu Mobile */
+@media (max-width: 991px) {
+    .nav-toggle {
+        display: block;
+    }
+    .main-nav {
+        display: none; /* Escondido por padrão no mobile */
+        position: absolute;
+        top: var(--header-height);
+        left: 0;
+        width: 100%;
+        background: var(--color-white);
+        box-shadow: var(--box-shadow);
+    }
+    .main-nav.is-visible {
+        display: block; /* Classe JS para mostrar */
+    }
+    .navbar-nav {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+    .nav-item {
+        margin: 0;
+        border-bottom: 1px solid #eee;
+    }
+    .nav-link {
+        padding: 1rem;
+    }
+    .nav-item:last-child {
+        padding: 1rem;
+    }
+    .btn-primary {
+        width: calc(100% - 2rem);
+        text-align: center;
+    }
+}
+
+
+/* --- DARK MODE (ENTREGA IV) --- */
+/* Aplica os estilos quando o <body> tem a classe .dark-mode */
+
+body.dark-mode {
+    background-color: var(--dm-bg);
+    color: var(--dm-text);
+}
+body.dark-mode .main-header,
+body.dark-mode .card,
+body.dark-mode .main-nav {
+    background-color: var(--dm-surface);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode .nav-link,
+body.dark-mode .card-title,
+body.dark-mode .metric-item p,
+body.dark-mode .footer-col p {
+    color: var(--dm-text);
+}
+body.dark-mode .nav-link.active,
+body.dark-mode .nav-link:hover,
+body.dark-mode .card-link,
+body.dark-mode .footer-col a:hover {
+    color: var(--color-primary);
+}
+body.dark-mode .page-section.bg-light {
+    background-color: var(--dm-bg);
+}
+body.dark-mode .main-footer {
+    background-color: #000;
+}
+body.dark-mode .nav-toggle span {
+    background: var(--dm-text);
+}
+body.dark-mode .form-control {
+    background: var(--dm-surface);
+    color: var(--dm-text);
+    border-color: #555;
+}
+body.dark-mode .toggle-btn {
+    background: var(--dm-surface);
+    border-color: #555;
+    color: var(--dm-text);
 }
