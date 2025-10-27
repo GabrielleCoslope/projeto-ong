@@ -1,0 +1,231 @@
+/* --- COMPONENTES --- */
+
+/* Botão */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid transparent;
+    border-radius: var(--border-radius);
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+}
+.btn-outline-light {
+    border-color: var(--color-white);
+    color: var(--color-white);
+}
+.btn-outline-light:hover {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+}
+
+/* Header */
+.main-header {
+    background: var(--color-white);
+    box-shadow: var(--box-shadow);
+    height: var(--header-height);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.navbar-brand img {
+    height: 45px;
+    width: auto;
+}
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+.nav-item {
+    margin-left: 1.5rem;
+}
+.nav-link {
+    color: var(--color-dark);
+    font-weight: 500;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+}
+.nav-link:hover,
+.nav-link.active {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+}
+
+/* Hero Section (index.html) */
+.hero-section {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../assets/hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 6rem 0;
+    color: var(--color-white);
+}
+.hero-section h1 {
+    color: var(--color-white);
+    font-size: 3rem;
+}
+.hero-section p {
+    font-size: 1.25rem;
+    margin: 1rem 0 2rem;
+}
+
+/* Metrics Section (index.html) */
+.metrics-section {
+    padding: 4rem 0;
+    text-align: center;
+}
+.metric-item {
+    margin-bottom: 1rem;
+}
+.metric-item h2 {
+    color: var(--color-primary);
+    font-size: 2.5rem;
+}
+
+/* Card de Projeto */
+.card {
+    background: var(--color-white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 2rem;
+    overflow: hidden;
+    height: 100%;
+}
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.card-body {
+    padding: 1.5rem;
+}
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border-radius: 50px;
+    background-color: var(--color-secondary);
+    color: var(--color-dark);
+    margin-bottom: 0.5rem;
+}
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+.card-text {
+    margin-bottom: 1rem;
+}
+.card-link {
+    font-weight: 700;
+}
+
+/* CTA Section (index.html) */
+.cta-section {
+    padding: 4rem 0;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-align: center;
+}
+.cta-section h2 {
+    color: var(--color-white);
+}
+
+/* Footer */
+.main-footer {
+    padding: 4rem 0;
+    background-color: var(--color-dark);
+    color: #ccc;
+    /* margin-top: auto; Removido, pois o sticky footer no body cuida disso */
+}
+.footer-col {
+    margin-bottom: 2rem;
+}
+.footer-col h5 {
+    color: var(--color-white);
+    margin-bottom: 1rem;
+}
+.footer-col p, .footer-col a {
+    color: #ccc;
+    font-size: 0.9rem;
+}
+.footer-col a:hover {
+    color: var(--color-white);
+    text-decoration: underline;
+}
+.footer-links {
+    list-style: none;
+}
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #444;
+    padding-top: 2rem;
+    margin-top: 2rem;
+}
+
+/* Barra de Filtro (projetos.html) */
+.filter-bar {
+    padding: 2rem 0;
+    text-align: center;
+}
+.filter-btn {
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+    margin: 0.25rem;
+    cursor: pointer;
+}
+.filter-btn.active {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+}
+
+/* Formulário (cadastro.html) */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+.form-group label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+.form-control {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-family: var(--font-body);
+}
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+legend {
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding: 0 0.5rem;
+}
