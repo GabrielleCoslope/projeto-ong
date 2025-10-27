@@ -1,6 +1,4 @@
-/* :root é onde definimos nossas variáveis (Sistema de Design) */
 :root {
-    /* Paleta de Cores */
     --color-primary: #00a1de;
     --color-primary-dark: #007bb5;
     --color-secondary: #ffc107; /* Amarelo para Badges */
@@ -8,12 +6,11 @@
     --color-body-text: #555;
     --color-light-bg: #f8f9fa; /* Fundo para seções */
     --color-white: #ffffff;
+    --color-danger: #dc3545; /* Para erros de validação */
     
-    /* Tipografia */
     --font-heading: 'Poppins', sans-serif;
     --font-body: 'Poppins', sans-serif;
     
-    /* Outras Variáveis */
     --header-height: 80px;
     --border-radius: 0.5rem; /* 8px */
     --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);

@@ -15,24 +15,24 @@
             </a>
             <nav>
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link nav-route">Início</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Sobre Nós</a></li>
-                    <li class="nav-item"><a href="projetos.html" class="nav-link active">Projetos</a></li>
-                    <li class="nav-item"><a href="cadastro.html" class="nav-link">Cadastro</a></li>
+                    <li class="nav-item"><a href="projetos.html" class="nav-link active nav-route">Projetos</a></li>
+                    <li class="nav-item"><a href="cadastro.html" class="nav-link nav-route">Cadastro</a></li>
                     <li class="nav-item"><a href="#" class="btn btn-primary">Doar Agora</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="page-header">
             <div class="container">
                 <h1>Nossos Projetos</h1>
             </div>
         </section>
 
-        <section class="filter-bar">
+        <section class="filter-bar page-section bg-light">
             <div class="container">
                 <button class="filter-btn active">Todos</button>
                 <button class="filter-btn">Educação</button>
@@ -44,57 +44,8 @@
         
         <section class="page-content">
             <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-4 col-md-6">
-                        <article class="card">
-                            <img src="images/project-education.jpg" alt="Educação Digital" class="card-img">
-                            <div class="card-body">
-                                <span class="badge">Educação</span>
-                                <h3 class="card-title">Educação Digital</h3>
-                                <p class="card-text">Programa de inclusão digital que oferece aulas de programação e design.</p>
-                                <a href="#" class="card-link">Saiba Mais &rarr;</a>
-                            </div>
-                        </article>
+                <div class="row" id="project-grid">
                     </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <article class="card">
-                            <img src="images/project-sports.jpg" alt="Esporte na Comunidade" class="card-img">
-                            <div class="card-body">
-                                <span class="badge">Esporte</span>
-                                <h3 class="card-title">Esporte na Comunidade</h3>
-                                <p class="card-text">Incentivo à prática esportiva como ferramenta de inclusão social e saúde.</p>
-                                <a href="#" class="card-link">Saiba Mais &rarr;</a>
-                            </div>
-                        </article>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <article class="card">
-                            <img src="images/project-culture.jpg" alt="Arte e Cultura" class="card-img">
-                            <div class="card-body">
-                                <span class="badge">Cultura</span>
-                                <h3 class="card-title">Arte e Cultura</h3>
-                                <p class="card-text">Oficinas de arte, música, dança e teatro para expandir os horizontes.</p>
-                                <a href="#" class="card-link">Saiba Mais &rarr;</a>
-                            </div>
-                        </article>
-                    </div>
-                    
-                    <div class="col-lg-4 col-md-6">
-                        <article class="card">
-                            <img src="images/hero-image.jpg" alt="Alfabetização" class="card-img">
-                            <div class="card-body">
-                                <span class="badge">Educação</span>
-                                <h3 class="card-title">Alfabetização de Adultos</h3>
-                                <p class="card-text">Promovendo autonomia, cidadania e novas oportunidades de vida.</p>
-                                <a href="#" class="card-link">Saiba Mais &rarr;</a>
-                            </div>
-                        </article>
-                    </div>
-
-                </div>
             </div>
         </section>
     </main>
@@ -109,10 +60,10 @@
                 <div class="col-lg-2 col-md-6 footer-col">
                     <h5>Links Rápidos</h5>
                     <ul class="footer-links">
-                        <li><a href="index.html">Início</a></li>
+                        <li><a href="index.html" class="nav-route">Início</a></li>
                         <li><a href="#">Sobre Nós</a></li>
-                        <li><a href="projetos.html">Projetos</a></li>
-                        <li><a href="cadastro.html">Cadastro</a></li>
+                        <li><a href="projetos.html" class="nav-route">Projetos</a></li>
+                        <li><a href="cadastro.html" class="nav-route">Cadastro</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6 footer-col">
@@ -132,6 +83,6 @@
         </div>
     </footer>
     
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
